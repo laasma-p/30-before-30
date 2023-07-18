@@ -35,11 +35,11 @@ body::-webkit-scrollbar {
 #heading,
 #description,
 #info,
-.container {
+#list {
   text-align: center;
 }
 
-.container {
+#list {
   background-color: #9f73ab;
 }
 
@@ -78,15 +78,8 @@ body::-webkit-scrollbar {
     visibility: hidden;
   }
 
-  .container {
-    padding: 0.7em;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-  }
-
   #list {
-    width: 85%;
+    padding: 0.5em;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -124,15 +117,8 @@ body::-webkit-scrollbar {
     padding: 0 0.7em;
   }
 
-  .container {
-    padding: 0.7em;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-  }
-
   #list {
-    width: 85%;
+    padding: 0.6em;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -153,5 +139,46 @@ body::-webkit-scrollbar {
 
   #footer {
     padding: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 661px) and (max-width: 992px) {
+  #header {
+    padding: 1.3em 0 1.1em;
+  }
+
+  #heading {
+    padding: 0 0.7em 0.3em;
+    font-size: 1.9em;
+  }
+
+  #description,
+  #info {
+    padding: 0 1.2em;
+  }
+
+  #list {
+    padding: 0.7em;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .list-item {
+    padding: 0.3em 0;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  #description,
+  #info,
+  .list-item,
+  #footer {
+    font-size: 1.4em;
+  }
+
+  #footer {
+    padding: 0.6em;
   }
 }
