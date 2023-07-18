@@ -6,7 +6,6 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
-  background-color: #9f73ab;
   color: #a3c7d6;
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
@@ -33,8 +32,30 @@ body::-webkit-scrollbar {
   font-family: Lato, Arial, Helvetica, sans-serif;
 }
 
+#heading,
+#description,
+#info,
+.container {
+  text-align: center;
+}
+
+.container {
+  background-color: #9f73ab;
+}
+
+#list {
+  list-style-type: none;
+}
+
+.list-item:hover {
+  cursor: pointer;
+}
+
+.list-item.crossed-out {
+  text-decoration: line-through;
+}
+
 #footer {
-  padding: 0.5em;
   background-color: #624f82;
 }
 
@@ -44,18 +65,11 @@ body::-webkit-scrollbar {
   }
 
   #heading {
-    font-size: 1.8em;
     padding: 0 0.7em 0.3em;
-  }
-
-  #heading,
-  #description,
-  .container {
-    text-align: center;
+    font-size: 1.6em;
   }
 
   #description {
-    font-size: 1.3em;
     padding: 0 0.7em;
   }
 
@@ -67,19 +81,77 @@ body::-webkit-scrollbar {
   .container {
     padding: 0.7em;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  #list {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
   .list-item {
     padding: 0.2em 0;
+    width: 80%;
   }
 
-  .list-item,
-  #footer {
+  #description,
+  .list-item {
     font-size: 1.2em;
   }
 
   #footer {
     display: none;
     visibility: hidden;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 660px) {
+  #header {
+    padding: 1.3em 0 1.1em;
+  }
+
+  #heading {
+    padding: 0 0.7em 0.3em;
+    font-size: 1.7em;
+  }
+
+  #description,
+  #info {
+    padding: 0 0.7em;
+  }
+
+  .container {
+    padding: 0.7em;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  #list {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .list-item {
+    padding: 0.2em 0;
+    width: 70%;
+  }
+
+  #description,
+  #info,
+  .list-item,
+  #footer {
+    font-size: 1.3em;
+  }
+
+  #footer {
+    padding: 0.5em;
   }
 }
